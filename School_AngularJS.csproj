@@ -1,0 +1,515 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{600A2AC6-D587-4A83-8023-74372F47BF65}</ProjectGuid>
+    <ProjectTypeGuids>{E3E379DF-F4C6-4180-9B81-6769533ABE47};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>School_AngularJS</RootNamespace>
+    <AssemblyName>School_AngularJS</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Mvc.FixedDisplayModes, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.FixedDisplayModes.1.0.0\lib\net40\Microsoft.Web.Mvc.FixedDisplayModes.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.4.5.11\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Net.Http.2.0.20710.0\lib\net40\System.Net.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.4.0.20710.0\lib\net40\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Net.Http.2.0.20710.0\lib\net40\System.Net.Http.WebRequest.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.4.0.20710.0\lib\net40\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.4.0.20710.0\lib\net40\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.4.0.20710.0\lib\net40\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.2.0.20715.0\lib\net40\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ProfileController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Views\Shared\Site.Master.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Shared\Site.Master.designer.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Content Include="assets\images\big\img1.jpg" />
+    <Content Include="assets\images\custom-select.png" />
+    <Content Include="assets\images\favicon.png" />
+    <Content Include="assets\images\logo-icon.png" />
+    <Content Include="assets\images\logo-text.png" />
+    <Content Include="assets\images\users\1.jpg" />
+    <Content Include="assets\images\users\2.jpg" />
+    <Content Include="assets\images\users\3.jpg" />
+    <Content Include="assets\images\users\4.jpg" />
+    <Content Include="assets\images\users\5.jpg" />
+    <Content Include="assets\images\users\6.jpg" />
+    <Content Include="assets\images\users\7.jpg" />
+    <Content Include="assets\images\users\8.jpg" />
+    <Content Include="assets\images\users\d1.jpg" />
+    <Content Include="assets\images\users\d2.jpg" />
+    <Content Include="assets\images\users\d3.jpg" />
+    <Content Include="assets\images\users\d4.jpg" />
+    <Content Include="assets\images\users\d5.jpg" />
+    <Content Include="assets\images\users\profile.png" />
+    <Content Include="assets\plugins\bootstrap\css\bootstrap-grid.css" />
+    <Content Include="assets\plugins\bootstrap\css\bootstrap-grid.min.css" />
+    <Content Include="assets\plugins\bootstrap\css\bootstrap-reboot.css" />
+    <Content Include="assets\plugins\bootstrap\css\bootstrap-reboot.min.css" />
+    <Content Include="assets\plugins\bootstrap\css\bootstrap.css" />
+    <Content Include="assets\plugins\bootstrap\css\bootstrap.min.css" />
+    <Content Include="assets\plugins\bootstrap\js\bootstrap.js" />
+    <Content Include="assets\plugins\bootstrap\js\bootstrap.min.js" />
+    <Content Include="assets\plugins\bootstrap\js\popper.min.js" />
+    <Content Include="assets\plugins\c3-master\c3.min.css" />
+    <Content Include="assets\plugins\c3-master\c3.min.js" />
+    <Content Include="assets\plugins\chartist-js\dist\chartist-init.css" />
+    <Content Include="assets\plugins\chartist-js\dist\chartist-init.js" />
+    <Content Include="assets\plugins\chartist-js\dist\chartist.css" />
+    <Content Include="assets\plugins\chartist-js\dist\chartist.js" />
+    <Content Include="assets\plugins\chartist-js\dist\chartist.min.css" />
+    <Content Include="assets\plugins\chartist-js\dist\chartist.min.js" />
+    <Content Include="assets\plugins\chartist-plugin-tooltip-master\.gitignore" />
+    <Content Include="assets\plugins\chartist-plugin-tooltip-master\dist\chartist-plugin-tooltip.css" />
+    <Content Include="assets\plugins\chartist-plugin-tooltip-master\dist\chartist-plugin-tooltip.js" />
+    <Content Include="assets\plugins\chartist-plugin-tooltip-master\dist\chartist-plugin-tooltip.min.js" />
+    <Content Include="assets\plugins\chartist-plugin-tooltip-master\Gruntfile.js" />
+    <Content Include="assets\plugins\chartist-plugin-tooltip-master\src\css\chartist-plugin-tooltip.css" />
+    <Content Include="assets\plugins\chartist-plugin-tooltip-master\src\scripts\chartist-plugin-tooltip.js" />
+    <Content Include="assets\plugins\chartist-plugin-tooltip-master\tasks\clean.js" />
+    <Content Include="assets\plugins\chartist-plugin-tooltip-master\tasks\copy.js" />
+    <Content Include="assets\plugins\chartist-plugin-tooltip-master\tasks\jasmine.js" />
+    <Content Include="assets\plugins\chartist-plugin-tooltip-master\tasks\jshint.js" />
+    <Content Include="assets\plugins\chartist-plugin-tooltip-master\tasks\sass.js" />
+    <Content Include="assets\plugins\chartist-plugin-tooltip-master\tasks\uglify.js" />
+    <Content Include="assets\plugins\chartist-plugin-tooltip-master\tasks\umd.js" />
+    <Content Include="assets\plugins\chartist-plugin-tooltip-master\test\runner.html" />
+    <Content Include="assets\plugins\chartist-plugin-tooltip-master\test\spec\spec-tooltip.js" />
+    <Content Include="assets\plugins\d3\d3.js" />
+    <Content Include="assets\plugins\d3\d3.min-v4.js" />
+    <Content Include="assets\plugins\d3\d3.min.js" />
+    <Content Include="assets\plugins\gmaps\gmaps.js" />
+    <Content Include="assets\plugins\gmaps\gmaps.min.js" />
+    <Content Include="assets\plugins\gmaps\jquery.gmaps.js" />
+    <Content Include="assets\plugins\gmaps\lib\gmaps.controls.js" />
+    <Content Include="assets\plugins\gmaps\lib\gmaps.core.js" />
+    <Content Include="assets\plugins\gmaps\lib\gmaps.events.js" />
+    <Content Include="assets\plugins\gmaps\lib\gmaps.geofences.js" />
+    <Content Include="assets\plugins\gmaps\lib\gmaps.geometry.js" />
+    <Content Include="assets\plugins\gmaps\lib\gmaps.layers.js" />
+    <Content Include="assets\plugins\gmaps\lib\gmaps.map_types.js" />
+    <Content Include="assets\plugins\gmaps\lib\gmaps.markers.js" />
+    <Content Include="assets\plugins\gmaps\lib\gmaps.native_extensions.js" />
+    <Content Include="assets\plugins\gmaps\lib\gmaps.overlays.js" />
+    <Content Include="assets\plugins\gmaps\lib\gmaps.routes.js" />
+    <Content Include="assets\plugins\gmaps\lib\gmaps.static.js" />
+    <Content Include="assets\plugins\gmaps\lib\gmaps.streetview.js" />
+    <Content Include="assets\plugins\gmaps\lib\gmaps.styles.js" />
+    <Content Include="assets\plugins\gmaps\lib\gmaps.utils.js" />
+    <Content Include="assets\plugins\jquery\jquery.min.js" />
+    <Content Include="assets\plugins\perfect-scrollbar\css\perfect-scrollbar.css" />
+    <Content Include="assets\plugins\perfect-scrollbar\css\perfect-scrollbar.min.css" />
+    <Content Include="assets\plugins\perfect-scrollbar\js\perfect-scrollbar.jquery.js" />
+    <Content Include="assets\plugins\perfect-scrollbar\js\perfect-scrollbar.jquery.min.js" />
+    <Content Include="assets\plugins\perfect-scrollbar\js\perfect-scrollbar.js" />
+    <Content Include="assets\plugins\perfect-scrollbar\js\perfect-scrollbar.min.js" />
+    <Content Include="Global.asax" />
+    <Content Include="Images\tmp_logo.png" />
+    <Content Include="JS\angular.min.js" />
+    <Content Include="lite\css\animate.css" />
+    <Content Include="lite\css\colors\default-dark.css" />
+    <Content Include="lite\css\icons\font-awesome\css\font-awesome.css" />
+    <Content Include="lite\css\icons\font-awesome\old\css\font-awesome.css" />
+    <Content Include="lite\css\icons\simple-line-icons\css\simple-line-icons.css" />
+    <Content Include="lite\css\icons\themify-icons\themify-icons.css" />
+    <Content Include="lite\css\pages\common.css" />
+    <Content Include="lite\css\pages\dashboard.css" />
+    <Content Include="lite\css\pages\error-pages.css" />
+    <Content Include="lite\css\pages\form-pages.css" />
+    <Content Include="lite\css\pages\google-vector-map.css" />
+    <Content Include="lite\css\pages\icon-page.css" />
+    <Content Include="lite\css\pages\other-pages.css" />
+    <Content Include="lite\css\pages\pages.css" />
+    <Content Include="lite\css\pages\pagination.css" />
+    <Content Include="lite\css\pages\perfect-scrollbar.css" />
+    <Content Include="lite\css\pages\table-pages.css" />
+    <Content Include="lite\css\spinners.css" />
+    <Content Include="lite\css\style.css" />
+    <Content Include="lite\icon-material.html" />
+    <Content Include="lite\index.html" />
+    <Content Include="lite\js\custom.js" />
+    <Content Include="lite\js\custom.min.js" />
+    <Content Include="lite\js\dashboard.js" />
+    <Content Include="lite\js\perfect-scrollbar.jquery.min.js" />
+    <Content Include="lite\js\sidebarmenu.js" />
+    <Content Include="lite\js\waves.js" />
+    <Content Include="lite\map-google.html" />
+    <Content Include="lite\pages-blank.html" />
+    <Content Include="lite\pages-error-404.html" />
+    <Content Include="lite\pages-profile.html" />
+    <Content Include="lite\scss\icons\font-awesome\css\font-awesome.css" />
+    <Content Include="lite\scss\icons\font-awesome\css\font-awesome.min.css" />
+    <Content Include="lite\scss\icons\font-awesome\fonts\fontawesome-webfont.svg" />
+    <Content Include="lite\scss\icons\font-awesome\old\.gitignore" />
+    <Content Include="lite\scss\icons\font-awesome\old\css\font-awesome.css" />
+    <Content Include="lite\scss\icons\font-awesome\old\css\font-awesome.min.css" />
+    <Content Include="lite\scss\icons\font-awesome\old\fonts\fontawesome-webfont.svg" />
+    <Content Include="lite\scss\icons\font-awesome\old\HELP-US-OUT.txt" />
+    <Content Include="lite\scss\icons\linea-icons\fonts\linea-arrows-10.svg" />
+    <Content Include="lite\scss\icons\linea-icons\fonts\linea-basic-10.svg" />
+    <Content Include="lite\scss\icons\linea-icons\fonts\linea-basic-elaboration-10.svg" />
+    <Content Include="lite\scss\icons\linea-icons\fonts\linea-ecommerce-10.svg" />
+    <Content Include="lite\scss\icons\linea-icons\fonts\linea-music-10.svg" />
+    <Content Include="lite\scss\icons\linea-icons\fonts\linea-software-10.svg" />
+    <Content Include="lite\scss\icons\linea-icons\fonts\linea-weather-10.svg" />
+    <Content Include="lite\scss\icons\linea-icons\linea.css" />
+    <Content Include="lite\scss\icons\material-design-iconic-font\css\material-design-iconic-font.css" />
+    <Content Include="lite\scss\icons\material-design-iconic-font\css\material-design-iconic-font.min.css" />
+    <Content Include="lite\scss\icons\material-design-iconic-font\css\materialdesignicons.min.css" />
+    <Content Include="lite\scss\icons\material-design-iconic-font\fonts\Material-Design-Iconic-Font.svg" />
+    <Content Include="lite\scss\icons\material-design-iconic-font\fonts\materialdesignicons-webfont.svg" />
+    <Content Include="lite\scss\icons\simple-line-icons\css\simple-line-icons.css" />
+    <Content Include="lite\scss\icons\simple-line-icons\fonts\Simple-Line-Icons.svg" />
+    <Content Include="lite\scss\icons\themify-icons\fonts\themify.svg" />
+    <Content Include="lite\scss\icons\themify-icons\ie7\ie7.css" />
+    <Content Include="lite\scss\icons\themify-icons\ie7\ie7.js" />
+    <Content Include="lite\scss\icons\themify-icons\themify-icons.css" />
+    <Content Include="lite\table-basic.html" />
+    <Content Include="Views\Home\Index.aspx" />
+    <Content Include="Views\Profile\Index.aspx" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Models\" />
+    <Folder Include="obj\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Home\Index__.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="assets\plugins\bootstrap\css\bootstrap-grid.css.map" />
+    <Content Include="assets\plugins\bootstrap\css\bootstrap-grid.min.css.map" />
+    <Content Include="assets\plugins\bootstrap\css\bootstrap-reboot.css.map" />
+    <Content Include="assets\plugins\bootstrap\css\bootstrap-reboot.min.css.map" />
+    <Content Include="assets\plugins\bootstrap\css\bootstrap.css.map" />
+    <Content Include="assets\plugins\bootstrap\css\bootstrap.min.css.map" />
+    <Content Include="assets\plugins\bootstrap\js\popper.min.js.map" />
+    <Content Include="assets\plugins\chartist-js\dist\chartist.css.map" />
+    <Content Include="assets\plugins\chartist-js\dist\chartist.min.js.map" />
+    <Content Include="assets\plugins\chartist-js\dist\scss\chartist.scss" />
+    <Content Include="assets\plugins\chartist-js\dist\scss\settings\_chartist-settings.scss" />
+    <Content Include="assets\plugins\chartist-plugin-tooltip-master\bower.json" />
+    <Content Include="assets\plugins\chartist-plugin-tooltip-master\CHANGELOG.md" />
+    <Content Include="assets\plugins\chartist-plugin-tooltip-master\dist\chartist-plugin-tooltip.css.map" />
+    <Content Include="assets\plugins\chartist-plugin-tooltip-master\dist\chartist-plugin-tooltip.min.js.map" />
+    <Content Include="assets\plugins\chartist-plugin-tooltip-master\dist\LICENSE" />
+    <Content Include="assets\plugins\chartist-plugin-tooltip-master\LICENSE" />
+    <Content Include="assets\plugins\chartist-plugin-tooltip-master\package.json" />
+    <Content Include="assets\plugins\chartist-plugin-tooltip-master\README.md" />
+    <Content Include="assets\plugins\chartist-plugin-tooltip-master\src\css\chartist-plugin-tooltip.css.map" />
+    <Content Include="assets\plugins\chartist-plugin-tooltip-master\src\scss\chartist-plugin-tooltip.scss" />
+    <Content Include="assets\plugins\chartist-plugin-tooltip-master\tasks\aliases.yml" />
+    <Content Include="assets\plugins\chartist-plugin-tooltip-master\test\.jshintrc" />
+    <Content Include="assets\plugins\d3\API.md" />
+    <Content Include="assets\plugins\d3\CHANGES.md" />
+    <Content Include="assets\plugins\d3\LICENSE" />
+    <Content Include="assets\plugins\d3\README.md" />
+    <Content Include="assets\plugins\gmaps\gmaps.min.js.map" />
+    <Content Include="lite\scss\app.scss" />
+    <Content Include="lite\scss\colors\default-dark.scss" />
+    <Content Include="lite\scss\grid.scss" />
+    <Content Include="lite\scss\icons\font-awesome\fonts\fontawesome-webfont.eot" />
+    <Content Include="lite\scss\icons\font-awesome\fonts\fontawesome-webfont.ttf" />
+    <Content Include="lite\scss\icons\font-awesome\fonts\fontawesome-webfont.woff" />
+    <Content Include="lite\scss\icons\font-awesome\fonts\fontawesome-webfont.woff2" />
+    <Content Include="lite\scss\icons\font-awesome\fonts\FontAwesome.otf" />
+    <Content Include="lite\scss\icons\font-awesome\less\animated.less" />
+    <Content Include="lite\scss\icons\font-awesome\less\bordered-pulled.less" />
+    <Content Include="lite\scss\icons\font-awesome\less\core.less" />
+    <Content Include="lite\scss\icons\font-awesome\less\fixed-width.less" />
+    <Content Include="lite\scss\icons\font-awesome\less\font-awesome.less" />
+    <Content Include="lite\scss\icons\font-awesome\less\icons.less" />
+    <Content Include="lite\scss\icons\font-awesome\less\larger.less" />
+    <Content Include="lite\scss\icons\font-awesome\less\list.less" />
+    <Content Include="lite\scss\icons\font-awesome\less\mixins.less" />
+    <Content Include="lite\scss\icons\font-awesome\less\path.less" />
+    <Content Include="lite\scss\icons\font-awesome\less\rotated-flipped.less" />
+    <Content Include="lite\scss\icons\font-awesome\less\screen-reader.less" />
+    <Content Include="lite\scss\icons\font-awesome\less\stacked.less" />
+    <Content Include="lite\scss\icons\font-awesome\less\variables.less" />
+    <Content Include="lite\scss\icons\font-awesome\old\.bower.json" />
+    <Content Include="lite\scss\icons\font-awesome\old\.npmignore" />
+    <Content Include="lite\scss\icons\font-awesome\old\bower.json" />
+    <Content Include="lite\scss\icons\font-awesome\old\fonts\fontawesome-webfont-old.ttf" />
+    <Content Include="lite\scss\icons\font-awesome\old\fonts\fontawesome-webfont.eot" />
+    <Content Include="lite\scss\icons\font-awesome\old\fonts\fontawesome-webfont.ttf" />
+    <Content Include="lite\scss\icons\font-awesome\old\fonts\fontawesome-webfont.woff" />
+    <Content Include="lite\scss\icons\font-awesome\old\fonts\fontawesome-webfont.woff2" />
+    <Content Include="lite\scss\icons\font-awesome\old\fonts\FontAwesome.otf" />
+    <Content Include="lite\scss\icons\font-awesome\old\less\animated.less" />
+    <Content Include="lite\scss\icons\font-awesome\old\less\bordered-pulled.less" />
+    <Content Include="lite\scss\icons\font-awesome\old\less\core.less" />
+    <Content Include="lite\scss\icons\font-awesome\old\less\extras.less" />
+    <Content Include="lite\scss\icons\font-awesome\old\less\fixed-width.less" />
+    <Content Include="lite\scss\icons\font-awesome\old\less\font-awesome.less" />
+    <Content Include="lite\scss\icons\font-awesome\old\less\icons.less" />
+    <Content Include="lite\scss\icons\font-awesome\old\less\larger.less" />
+    <Content Include="lite\scss\icons\font-awesome\old\less\list.less" />
+    <Content Include="lite\scss\icons\font-awesome\old\less\mixins.less" />
+    <Content Include="lite\scss\icons\font-awesome\old\less\path.less" />
+    <Content Include="lite\scss\icons\font-awesome\old\less\rotated-flipped.less" />
+    <Content Include="lite\scss\icons\font-awesome\old\less\spinning.less" />
+    <Content Include="lite\scss\icons\font-awesome\old\less\stacked.less" />
+    <Content Include="lite\scss\icons\font-awesome\old\less\variables.less" />
+    <Content Include="lite\scss\icons\font-awesome\old\scss\font-awesome.scss" />
+    <Content Include="lite\scss\icons\font-awesome\old\scss\_animated.scss" />
+    <Content Include="lite\scss\icons\font-awesome\old\scss\_bordered-pulled.scss" />
+    <Content Include="lite\scss\icons\font-awesome\old\scss\_core.scss" />
+    <Content Include="lite\scss\icons\font-awesome\old\scss\_extras.scss" />
+    <Content Include="lite\scss\icons\font-awesome\old\scss\_fixed-width.scss" />
+    <Content Include="lite\scss\icons\font-awesome\old\scss\_icons.scss" />
+    <Content Include="lite\scss\icons\font-awesome\old\scss\_larger.scss" />
+    <Content Include="lite\scss\icons\font-awesome\old\scss\_list.scss" />
+    <Content Include="lite\scss\icons\font-awesome\old\scss\_mixins.scss" />
+    <Content Include="lite\scss\icons\font-awesome\old\scss\_path.scss" />
+    <Content Include="lite\scss\icons\font-awesome\old\scss\_rotated-flipped.scss" />
+    <Content Include="lite\scss\icons\font-awesome\old\scss\_spinning.scss" />
+    <Content Include="lite\scss\icons\font-awesome\old\scss\_stacked.scss" />
+    <Content Include="lite\scss\icons\font-awesome\old\scss\_variables.scss" />
+    <Content Include="lite\scss\icons\font-awesome\scss\font-awesome.scss" />
+    <Content Include="lite\scss\icons\font-awesome\scss\_animated.scss" />
+    <Content Include="lite\scss\icons\font-awesome\scss\_bordered-pulled.scss" />
+    <Content Include="lite\scss\icons\font-awesome\scss\_core.scss" />
+    <Content Include="lite\scss\icons\font-awesome\scss\_fixed-width.scss" />
+    <Content Include="lite\scss\icons\font-awesome\scss\_icons.scss" />
+    <Content Include="lite\scss\icons\font-awesome\scss\_larger.scss" />
+    <Content Include="lite\scss\icons\font-awesome\scss\_list.scss" />
+    <Content Include="lite\scss\icons\font-awesome\scss\_mixins.scss" />
+    <Content Include="lite\scss\icons\font-awesome\scss\_path.scss" />
+    <Content Include="lite\scss\icons\font-awesome\scss\_rotated-flipped.scss" />
+    <Content Include="lite\scss\icons\font-awesome\scss\_screen-reader.scss" />
+    <Content Include="lite\scss\icons\font-awesome\scss\_stacked.scss" />
+    <Content Include="lite\scss\icons\font-awesome\scss\_variables.scss" />
+    <Content Include="lite\scss\icons\linea-icons\fonts\linea-arrows-10.eot" />
+    <Content Include="lite\scss\icons\linea-icons\fonts\linea-arrows-10.ttf" />
+    <Content Include="lite\scss\icons\linea-icons\fonts\linea-arrows-10.woff" />
+    <Content Include="lite\scss\icons\linea-icons\fonts\linea-basic-10.eot" />
+    <Content Include="lite\scss\icons\linea-icons\fonts\linea-basic-10.ttf" />
+    <Content Include="lite\scss\icons\linea-icons\fonts\linea-basic-10.woff" />
+    <Content Include="lite\scss\icons\linea-icons\fonts\linea-basic-elaboration-10.eot" />
+    <Content Include="lite\scss\icons\linea-icons\fonts\linea-basic-elaboration-10.ttf" />
+    <Content Include="lite\scss\icons\linea-icons\fonts\linea-basic-elaboration-10.woff" />
+    <Content Include="lite\scss\icons\linea-icons\fonts\linea-ecommerce-10.eot" />
+    <Content Include="lite\scss\icons\linea-icons\fonts\linea-ecommerce-10.ttf" />
+    <Content Include="lite\scss\icons\linea-icons\fonts\linea-ecommerce-10.woff" />
+    <Content Include="lite\scss\icons\linea-icons\fonts\linea-music-10.eot" />
+    <Content Include="lite\scss\icons\linea-icons\fonts\linea-music-10.ttf" />
+    <Content Include="lite\scss\icons\linea-icons\fonts\linea-music-10.woff" />
+    <Content Include="lite\scss\icons\linea-icons\fonts\linea-software-10.eot" />
+    <Content Include="lite\scss\icons\linea-icons\fonts\linea-software-10.ttf" />
+    <Content Include="lite\scss\icons\linea-icons\fonts\linea-software-10.woff" />
+    <Content Include="lite\scss\icons\linea-icons\fonts\linea-weather-10.eot" />
+    <Content Include="lite\scss\icons\linea-icons\fonts\linea-weather-10.ttf" />
+    <Content Include="lite\scss\icons\linea-icons\fonts\linea-weather-10.woff" />
+    <Content Include="lite\scss\icons\linea-icons\linea.less" />
+    <Content Include="lite\scss\icons\linea-icons\linea.scss" />
+    <Content Include="lite\scss\icons\material-design-iconic-font\fonts\Material-Design-Iconic-Font.eot" />
+    <Content Include="lite\scss\icons\material-design-iconic-font\fonts\Material-Design-Iconic-Font.ttf" />
+    <Content Include="lite\scss\icons\material-design-iconic-font\fonts\Material-Design-Iconic-Font.woff" />
+    <Content Include="lite\scss\icons\material-design-iconic-font\fonts\Material-Design-Iconic-Font.woff2" />
+    <Content Include="lite\scss\icons\material-design-iconic-font\fonts\materialdesignicons-webfont.eot" />
+    <Content Include="lite\scss\icons\material-design-iconic-font\fonts\materialdesignicons-webfont.ttf" />
+    <Content Include="lite\scss\icons\material-design-iconic-font\fonts\materialdesignicons-webfont.woff" />
+    <Content Include="lite\scss\icons\material-design-iconic-font\fonts\materialdesignicons-webfont.woff2" />
+    <Content Include="lite\scss\icons\simple-line-icons\fonts\Simple-Line-Icons.eot" />
+    <Content Include="lite\scss\icons\simple-line-icons\fonts\Simple-Line-Icons.ttf" />
+    <Content Include="lite\scss\icons\simple-line-icons\fonts\Simple-Line-Icons.woff" />
+    <Content Include="lite\scss\icons\simple-line-icons\fonts\Simple-Line-Icons.woff2" />
+    <Content Include="lite\scss\icons\simple-line-icons\less\simple-line-icons.less" />
+    <Content Include="lite\scss\icons\simple-line-icons\scss\simple-line-icons.scss" />
+    <Content Include="lite\scss\icons\themify-icons\fonts\themify.eot" />
+    <Content Include="lite\scss\icons\themify-icons\fonts\themify.ttf" />
+    <Content Include="lite\scss\icons\themify-icons\fonts\themify.woff" />
+    <Content Include="lite\scss\icons\themify-icons\themify-icons.less" />
+    <Content Include="lite\scss\pages\button-page.scss" />
+    <Content Include="lite\scss\pages\common.scss" />
+    <Content Include="lite\scss\pages\dashboard.scss" />
+    <Content Include="lite\scss\pages\error-pages.scss" />
+    <Content Include="lite\scss\pages\form-pages.scss" />
+    <Content Include="lite\scss\pages\google-vector-map.scss" />
+    <Content Include="lite\scss\pages\icon-page.scss" />
+    <Content Include="lite\scss\pages\other-pages.scss" />
+    <Content Include="lite\scss\pages\pages.scss" />
+    <Content Include="lite\scss\pages\pagination.scss" />
+    <Content Include="lite\scss\pages\perfect-scrollbar.scss" />
+    <Content Include="lite\scss\pages\table-pages.scss" />
+    <Content Include="lite\scss\pages\widget-page.scss" />
+    <Content Include="lite\scss\prepros-6.config" />
+    <Content Include="lite\scss\responsive.scss" />
+    <Content Include="lite\scss\sidebar.scss" />
+    <Content Include="lite\scss\style.scss" />
+    <Content Include="lite\scss\variable.scss" />
+    <Content Include="lite\scss\widgets\activity.scss" />
+    <Content Include="lite\scss\widgets\blog.scss" />
+    <Content Include="lite\scss\widgets\calendar.scss" />
+    <Content Include="lite\scss\widgets\carousel.scss" />
+    <Content Include="lite\scss\widgets\chat-widget.scss" />
+    <Content Include="lite\scss\widgets\comment.scss" />
+    <Content Include="lite\scss\widgets\common-widget.scss" />
+    <Content Include="lite\scss\widgets\contact.scss" />
+    <Content Include="lite\scss\widgets\feed.scss" />
+    <Content Include="lite\scss\widgets\msg-box.scss" />
+    <Content Include="lite\scss\widgets\profile.scss" />
+    <Content Include="lite\scss\widgets\social.scss" />
+    <Content Include="lite\scss\widgets\steamline.scss" />
+    <Content Include="lite\scss\widgets\to-do.scss" />
+    <Content Include="lite\scss\widgets\topbar-mail.scss" />
+    <Content Include="lite\scss\widgets\weather-widget.scss" />
+    <Content Include="lite\scss\widgets\widgets.scss" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\Site.Master" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:6695/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>
